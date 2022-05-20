@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1 Лаба</title>
+    <meta charset="utf-8">
+	<style>
+		body{
+		background: #5FF3F8 url(MainBackground.jpg);
+		color: #fff;
+		padding: 0;
+		margin: 0;
+		}
+		
+		.rectangle{
+		background-color: #FF96D3;
+		font-size: 16px;
+		position: relative;
+		font-family: monospace;
+		}
+		
+		.rectangle td{
+		font-style: italic;
+		}
+		
+		.heading{
+		font-size: 25px;
+		}
+		
+		#circleBorder{
+		padding-top: 6%;
+		padding-bottom: 6%;
+		border: 5px solid #FF96D3;
+		border-radius: 10px;
+		height: 300px;
+		}
+		
+		#circleBorder td{
+		height: 50px;
+		padding-left: 5%;
+		padding-right: 5%;
+		}
+		
+		img{
+		border: 5px solid #000;
+		border-radius: 10px;
+		}
+		#feeter{
+		font-size: 30px;
+		text-shadow: 3px 3px 3px #000;
+		}
+		
+		
+	</style>
+  </head>
+  <body>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  
+  <!td - ячейка
+  th - заголовок таблицы
+  tr - строка>
+  
+<table width=100% height=100%>
+	<tr class="rectangle heading" width=100% height=15%>
+      <th width=100% align="center" colspan="2">Ершова Анна, Гр. P3232<br>Вариант 32004</th>
+    </tr>
+	<tr>
+		<td><br><br></td>
+	</tr>
+	<tr height=500px>
+		<td width=50% align="center">
+		<form action="handler.php" method="get">
+			<table id="circleBorder" class="rectangle">
+	
+				<tr>
+					<th align="center">
+						<h3>Форма для ввода данных</h3>
+					</th>
+				</tr>
+				<tr>
+					<td>
+						Выберите X:
+						<input type="checkbox" checked="true" name="xCoordinate" id='cb1' value="-3" onclick="cbFunction1();"><label for='cb1'>-3</label>
+						<input type="checkbox" name="xCoordinate" id='cb2' value="-2" onclick="cbFunction2();"><label for='cb2'>-2</label>
+						<input type="checkbox" name="xCoordinate" id='cb3' value="-1" onclick="cbFunction3();"><label for='cb3'>-1</label>
+						<input type="checkbox" name="xCoordinate" class="checkbox" id='cb4' value="0" onclick="cbFunction4();"><label for='cb4'>0</label>
+						<input type="checkbox" name="xCoordinate" class="checkbox" id='cb5' value="1" onclick="cbFunction5();"><label for='cb5'>1</label>
+						<input type="checkbox" name="xCoordinate" class="checkbox" id='cb6' value="2" onclick="cbFunction6();"><label for='cb6'>2</label>
+						<input type="checkbox" name="xCoordinate" class="checkbox" id='cb7' value="3" onclick="cbFunction7();"><label for='cb7'>3</label>
+						<input type="checkbox" name="xCoordinate" class="checkbox" id='cb8' value="4" onclick="cbFunction8();"><label for='cb8'>4</label>
+						<input type="checkbox" name="xCoordinate" class="checkbox" id='cb9' value="5" onclick="cbFunction9();"><label for='cb9'>5</label>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Введите Y:
+						<input id="coordinateY" name="yCoordinate" type="text" placeholder="(-5...5)">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						Выберите радиус:
+						<button type="submit" name="radius" value="1" onclick="validateY();">1</button>
+						<button type="submit" name="radius" value="1.5" onclick="validateY();">1.5</button>
+						<button type="submit" name="radius" value="2" onclick="validateY();">2</button>
+						<button type="submit" name="radius" value="2.5" onclick="validateY();">2.5</button>
+						<button type="submit" name="radius" value="3" onclick="validateY();">3</button>
+					</td>
+				</tr>
+			</table>
+			</form>
+		</td>
+		<td width=50%>
+			<img src="areas.png" width=50%>
+		</td>
+	</tr>
+	<tr height=100px></tr>
+	<tr id="feeter">
+	<td align="center" colspan="2">2021 г.</td>
+	</tr>
+</table>  
+  
+  <script type="text/javascript">
+	function cbFunction1(){
+
+	if (document.querySelector('#cb1').checked){
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb8').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction2(){
+
+	if (document.querySelector('#cb2').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb8').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction3(){
+
+	if (document.querySelector('#cb3').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb8').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction4(){
+
+	if (document.querySelector('#cb4').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb8').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction5(){
+
+	if (document.querySelector('#cb5').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb8').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction6(){
+
+	if (document.querySelector('#cb6').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb8').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction7(){
+
+	if (document.querySelector('#cb7').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb8').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction8(){
+
+	if (document.querySelector('#cb8').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb9').checked = false;
+	}
+	}
+	
+	function cbFunction9(){
+
+	if (document.querySelector('#cb9').checked){
+		document.getElementById('cb1').checked = false;
+		document.getElementById('cb2').checked = false;
+		document.getElementById('cb3').checked = false;
+		document.getElementById('cb4').checked = false;
+		document.getElementById('cb5').checked = false;
+		document.getElementById('cb6').checked = false;
+		document.getElementById('cb7').checked = false;
+		document.getElementById('cb8').checked = false;
+	}
+	}
+	
+	function validateY(){
+	var coordinateY = document.getElementById("coordinateY");
+
+
+
+	if (!coordinateY.value){
+		event.preventDefault();
+	coordinateY.style.border = "2px solid red";
+	alert('Заполните все данные');
+	} else if (!(/^-?[0-9]+$/).test(coordinateY.value)){
+		event.preventDefault();
+	alert('В текстовое поле можно вводить только числа');
+	} else if (parseFloat(coordinateY.value)<= -5 || coordinateY>=5){
+		event.preventDefault();
+	alert('Координата Y должна принадлежать диапазону (-5; 5)');
+	}
+	}
+	
+	
+	
+  </script>
+  
+  
+  
+  </body>
+</html>
