@@ -1,0 +1,36 @@
+body {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-color: #BAA6EE;
+    background-size: 100%;
+    font-style: italic;
+    font-family: monospace;
+}
+
+.heading {
+    background-color: #A487DD;
+    text-align: center;
+    font-size: 25px;
+}
+
+.resultTable {
+    background-color: whitesmoke;
+    color: black;
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    overflow: scroll;
+}
+
+.resultTable th {
+    background-color: #A487DD;
+    border: 1px solid black;
+}
+
+.resultTable td {
+    border: 1px solid black;
+}
+._form {
+    font-size: 16px;
+}
+

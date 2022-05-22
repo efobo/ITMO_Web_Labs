@@ -1,0 +1,21 @@
+button {
+    background-color: white;
+    border: purple;
+    color: black;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 10px;
+    font-size:0.9vw;
+}
+button:hover{
+    cursor: pointer;
+    background-color: #6F60C1;
+}
+
+#clean_button {
+    width: 50%;
+
+}

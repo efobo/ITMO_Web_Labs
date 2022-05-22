@@ -1,0 +1,43 @@
+body {
+    background-image: url(../img/background.jpg);
+    background-repeat: no-repeat;
+    background-color: #BAA6EE;
+    background-size: 100%;
+    font-style: italic;
+    font-family: monospace;
+}
+button {
+    background-color: white;
+    border: purple;
+    color: black;
+    padding: 5px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 10px;
+    font-size:0.9vw;
+}
+
+button:hover{
+    cursor: pointer;
+    background-color: #6F60C1;
+}
+.resultTable {
+    background-color: whitesmoke;
+    color: black;
+    /*border-collapse: collapse;*/
+    width: 100%;
+    text-align: center;
+    height: 40px;
+    overflow: scroll;
+}
+
+.resultTable th {
+    background-color: #A487DD;
+    border: 1px solid black;
+}
+
+.resultTable td {
+    border: 1px solid black;
+}
