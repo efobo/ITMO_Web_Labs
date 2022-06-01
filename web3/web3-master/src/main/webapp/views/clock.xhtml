@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:m="http://java.sun.com/jsf/facelets"
+      xsi:schemaLocation="http://primefaces.org/ui/extensions">
+<h:head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Начало работы</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="../css/clock.css"/>
+    <style type="text/css">
+        .header {
+            margin: 10px 0 0 0;
+            text-align: center;
+        }
+
+        .header h1,
+        p,
+        a {
+            color: ghostwhite;
+            opacity: 100%;
+        }
+
+        .header p,
+        a {
+            font-size: 20px;
+        }
+
+        .header a {
+            text-decoration: none;
+        }
+
+        .header a:hover {
+            color: pink;
+            font-size: 25px;
+        }
+    </style>
+</h:head>
+<h:body>
+    <div class="header">
+        <m:include src="../views/headersNames.xhtml"/>
+    </div>
+    <div class="clock">
+        <p>Время:</p>
+        <h1 id="clock">00:00:00</h1>
+    </div>
+    <div class="mainPage_link">
+<!--        <h:outputLink value="main.xhtml">Нажмите сюда, чтобы перейти на главную страницу</h:outputLink>-->
+        <label class="linkOnMainPage">
+            <h:link value = " Чтобы перейти к приложению нажми здесь! " outcome = "main.xhtml"/>
+        </label>
+    </div>
+<!--    -->
+</h:body>
+<script type="application/javascript" src="../js/clock.js"></script>
+<script type="application/javascript" src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+</html>

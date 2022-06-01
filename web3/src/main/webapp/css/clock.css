@@ -1,0 +1,34 @@
+body{
+    background-image: url(../img/back.jpg);
+    background-repeat: no-repeat;
+    background-color: rgb(74, 116, 91);
+}
+
+.clock {
+    min-width: content-box;
+    vertical-align: middle;
+    margin: 10%;
+}
+
+.clock p {
+    text-align: center;
+    color: white;
+    font-size: 400%;
+}
+
+#clock {
+    text-align: center;
+    color: white;
+    border-style: dashed;
+    border-color: white;
+    font-size: 550%;
+}
+
+.linkOnMainPage{
+    background-color: deeppink;
+}
+.mainPage_link{
+    border: inset white 10px ;
+    position: center;
+    text-align: center;
+}
